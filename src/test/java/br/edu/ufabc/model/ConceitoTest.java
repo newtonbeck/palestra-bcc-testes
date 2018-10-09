@@ -12,7 +12,8 @@ public class ConceitoTest {
         Aluno aluno = new Aluno("21006012");
         Prova p1 = new Prova(10.0);
         Prova p2 = new Prova(0.0);
-        Conceito conceito = new Conceito(aluno, p1, p2);
+        Disciplina disciplina = new Disciplina("abc-123");
+        Conceito conceito = new Conceito(aluno, p1, p2, disciplina);
 
         // Quando
         Double notaFinal = conceito.getNotaFinal();
@@ -27,7 +28,8 @@ public class ConceitoTest {
         Aluno aluno = new Aluno("21006012");
         Prova p1 = new Prova(0.0);
         Prova p2 = new Prova(10.0);
-        Conceito conceito = new Conceito(aluno, p1, p2);
+        Disciplina disciplina = new Disciplina("abc-123");
+        Conceito conceito = new Conceito(aluno, p1, p2, disciplina);
 
         // Quando
         Double notaFinal = conceito.getNotaFinal();
@@ -42,7 +44,8 @@ public class ConceitoTest {
         Aluno aluno = new Aluno("21006012");
         Prova p1 = new Prova(9.0);
         Prova p2 = new Prova(0.0);
-        Conceito conceito = new Conceito(aluno, p1, p2);
+        Disciplina disciplina = new Disciplina("abc-123");
+        Conceito conceito = new Conceito(aluno, p1, p2, disciplina);
 
         // Quando
         char conceitoFinal = conceito.getConceitoFinal();
@@ -57,7 +60,8 @@ public class ConceitoTest {
         Aluno aluno = new Aluno("21006012");
         Prova p1 = new Prova(10.0);
         Prova p2 = new Prova(1.0);
-        Conceito conceito = new Conceito(aluno, p1, p2);
+        Disciplina disciplina = new Disciplina("abc-123");
+        Conceito conceito = new Conceito(aluno, p1, p2, disciplina);
 
         // Quando
         char conceitoFinal = conceito.getConceitoFinal();
@@ -72,7 +76,8 @@ public class ConceitoTest {
         Aluno aluno = new Aluno("21006012");
         Prova p1 = new Prova(10.0);
         Prova p2 = new Prova(3.0);
-        Conceito conceito = new Conceito(aluno, p1, p2);
+        Disciplina disciplina = new Disciplina("abc-123");
+        Conceito conceito = new Conceito(aluno, p1, p2, disciplina);
 
         // Quando
         char conceitoFinal = conceito.getConceitoFinal();
@@ -87,7 +92,8 @@ public class ConceitoTest {
         Aluno aluno = new Aluno("21006012");
         Prova p1 = new Prova(10.0);
         Prova p2 = new Prova(6.0);
-        Conceito conceito = new Conceito(aluno, p1, p2);
+        Disciplina disciplina = new Disciplina("abc-123");
+        Conceito conceito = new Conceito(aluno, p1, p2, disciplina);
 
         // Quando
         char conceitoFinal = conceito.getConceitoFinal();
@@ -102,7 +108,8 @@ public class ConceitoTest {
         Aluno aluno = new Aluno("21006012");
         Prova p1 = new Prova(10.0);
         Prova p2 = new Prova(9.0);
-        Conceito conceito = new Conceito(aluno, p1, p2);
+        Disciplina disciplina = new Disciplina("abc-123");
+        Conceito conceito = new Conceito(aluno, p1, p2, disciplina);
 
         // Quando
         char conceitoFinal = conceito.getConceitoFinal();

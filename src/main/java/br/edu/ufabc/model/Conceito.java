@@ -8,10 +8,13 @@ public class Conceito {
 
     private Prova p2;
 
-    public Conceito(Aluno aluno, Prova p1, Prova p2) {
+    private Disciplina disciplina;
+
+    public Conceito(Aluno aluno, Prova p1, Prova p2, Disciplina disciplina) {
         this.aluno = aluno;
         this.p1 = p1;
         this.p2 = p2;
+        this.disciplina = disciplina;
     }
 
     public Aluno getAluno() {
@@ -24,6 +27,10 @@ public class Conceito {
 
     public Prova getP2() {
         return p2;
+    }
+
+    public Disciplina getDisciplina() {
+        return disciplina;
     }
 
     public Double getNotaFinal() {
