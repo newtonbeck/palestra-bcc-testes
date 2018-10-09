@@ -20,9 +20,9 @@
             <tbody th:each="conceito: ${conceitos}">
                 <tr>
                     <td th:text="${conceito.aluno.ra}">12345678</td>
-                    <td th:text="${conceito.p1.nota}">5.0</td>
-                    <td th:text="${conceito.p2.nota}">7.0</td>
-                    <td th:text="${conceito.notaFinal}">6.5</td>
+                    <td th:text="${#numbers.formatDecimal(conceito.p1.nota, 2, 2)}">5.0</td>
+                    <td th:text="${#numbers.formatDecimal(conceito.p2.nota, 2, 2)}">7.0</td>
+                    <td th:text="${#numbers.formatDecimal(conceito.notaFinal, 2, 2)}">6.5</td>
                     <td th:text="${conceito.conceitoFinal}">C</td>
                 </tr>
             </tbody>
