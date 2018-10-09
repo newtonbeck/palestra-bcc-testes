@@ -1,0 +1,31 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8" />
+        <title th:text="${codigo_disciplina}">xpto-123</title>
+    </head>
+    <body>
+        <h1 th:text="${codigo_disciplina}">xpto-123</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>RA</th>
+                    <th>Nota P1</th>
+                    <th>Nota P2</th>
+                    <th>Média final</th>
+                    <th>Conceito final</th>
+                </tr>
+            </thead>
+            <tbody th:each="conceito: ${conceitos}">
+                <tr>
+                    <td th:text="${conceito.aluno.ra}">12345678</td>
+                    <td th:text="${conceito.p1.nota}">5.0</td>
+                    <td th:text="${conceito.p2.nota}">7.0</td>
+                    <td th:text="${conceito.notaFinal}">6.5</td>
+                    <td th:text="${conceito.conceitoFinal}">C</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
