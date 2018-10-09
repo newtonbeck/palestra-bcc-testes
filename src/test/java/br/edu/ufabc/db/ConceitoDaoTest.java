@@ -38,6 +38,28 @@ public class ConceitoDaoTest {
         limpaTabela(conexao);
     }
 
+    @Test
+    public void deve_retornar_uma_lista_vazia_quando_nao_tiver_nenhum_aluno_na_disciplina() throws SQLException {
+        // Dado que
+        Connection conexao = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/tests_test",
+                "root",
+                "");
+
+        insereConceito(conexao, "87654321", 9.0, 9.0, "def-456");
+
+        ConceitoDao dao = new ConceitoDao(conexao);
+        Disciplina disciplina = new Disciplina("abc-123");
+
+        // Quando
+        List<Conceito> conceitos = dao.listaPor(disciplina);
+
+        // Espero que
+        assertTrue(conceitos.isEmpty());
+
+        limpaTabela(conexao);
+    }
+
     private void insereConceito(Connection conexao, String nomeAluno, Double notaP1, Double notaP2, String codigoDisciplina) throws SQLException {
         PreparedStatement comando = conexao
                 .prepareStatement("insert into conceitos(ra_aluno, nota_p1, nota_p2, codigo_disciplina) values(?, ?, ?, ?)");

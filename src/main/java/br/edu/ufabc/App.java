@@ -30,6 +30,10 @@ public class App {
             Map<String, Object> params = new HashMap<>();
             params.put("codigo_disciplina", codigoDisciplina);
             params.put("conceitos", conceitos);
+            if (conceitos.isEmpty()) {
+                res.status(404);
+                return null;
+            }
             return new ThymeleafTemplateEngine().render(
                     new ModelAndView(params, "conceitos")
             );
